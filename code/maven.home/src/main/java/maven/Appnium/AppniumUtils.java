@@ -4,13 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -100,24 +97,39 @@ public class AppniumUtils {
 		WebElement element = driver.findElementById(id);
 		element.click();
 	}
+
 	/**
 	 * ½ØÆÁ²Ù×÷
+	 * 
 	 * @param url
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	public static void takeshot(String url) throws IOException {
-		File screenShotFile =driver.getScreenshotAs(OutputType.FILE);
-		FileUtil.copyFile(screenShotFile,new File("./target/"+setScreenShotName(url)+".jpg"));
+		File screenShotFile = driver.getScreenshotAs(OutputType.FILE);
+		FileUtil.copyFile(screenShotFile, new File("./target/" + setScreenShotName(url) + ".jpg"));
 	}
+
 	/**
 	 * ½ØÈ¡Í¼Æ¬Ãû³Æ
+	 * 
 	 * @param url
 	 * @return
 	 */
 	private static String setScreenShotName(String url) {
 		// TODO Auto-generated method stub
-	   String[] file=url.split("\\.");
-	   String filename=file[file.length-1];
-	   return filename;
+		String[] file = url.split("\\.");
+		String filename = file[file.length - 1];
+		return filename;
+	}
+
+	@SuppressWarnings("unused")
+	private static String TestAutomator(String id) {
+		@SuppressWarnings("unused")
+		List<WebElement> elements = (List<WebElement>) driver.findElementByAndroidUIAutomator("new Uiselector().className(" + id + ")");
+		List<WebElement> elementsinsdex = (List<WebElement>) driver.findElementByAndroidUIAutomator("new Uiselector().className(" + id + ").index(1)");
+
+		WebElement webElement = elements.get(0);
+		String value = webElement.getText();
+		return value;
 	}
 }

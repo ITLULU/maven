@@ -9,18 +9,29 @@
 	<description>这是测开笔记</description>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
-		<dependency>
+	  <dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>4.1.2</version>
 		</dependency>
+		<!--  https://mvnrepository.com/artifact/io.appium/java-client -->
+		<!-- <dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>5.0.4</version>
+		</dependency> -->
+		
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
+	<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>2.53.1</version>
-		</dependency>
-
+		</dependency> 
+		<!-- <dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.6.0</version>
+		</dependency>  -->
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -179,8 +190,8 @@
 					<resultsDirectory>./target/allure-results</resultsDirectory>
 					<!--@Issue以及@TestCaseId中的链接配置，%s为id占位符 -->
 					<properties>
-						<allure.issues.tracker.pattern>http://122.225.68.74:8082/browse/%s</allure.issues.tracker.pattern>
-						<allure.tests.management.pattern>http://122.225.68.74:8082/browse/%s</allure.tests.management.pattern>
+					<!-- 	<allure.issues.tracker.pattern>http://122.225.68.74:8082/browse/%s</allure.issues.tracker.pattern>
+						<allure.tests.management.pattern>http://122.225.68.74:8082/browse/%s</allure.tests.management.pattern> -->
 					</properties>
 
 				</configuration>
