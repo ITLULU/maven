@@ -179,7 +179,7 @@
 						</property>
 					</systemProperties>
 					<!-- 使allure-results在target文件夹下（很重要） -->
-				<!-- 	<workingDirectory>target/</workingDirectory> -->
+				 	<workingDirectory>target/</workingDirectory> 
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -199,28 +199,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<!--allure的report插件，生成html报告,配置case以及bug地址 -->
-	<reporting>
-		<excludeDefaults>true</excludeDefaults>
-		<plugins>
-			<plugin>
-				<groupId>ru.yandex.qatools.allure</groupId>
-				<artifactId>allure-maven-plugin</artifactId>
-				<version>2.5</version>
-				<configuration>
-					<!--生成报告所需result源文件目录 -->
-					<resultsDirectory>./target/allure-results</resultsDirectory>
-					<!--@Issue以及@TestCaseId中的链接配置，%s为id占位符 -->
-					<properties>
-					<!-- 	<allure.issues.tracker.pattern>http://122.225.68.74:8082/browse/%s</allure.issues.tracker.pattern>
-						<allure.tests.management.pattern>http://122.225.68.74:8082/browse/%s</allure.tests.management.pattern> -->
-					</properties>
-
-				</configuration>
-
-			</plugin>
-		</plugins>
-		<!--设置site目录 -->
-		<outputDirectory>${project.build.directory}/${timestamp}/site</outputDirectory>
-	</reporting>
 </project>
