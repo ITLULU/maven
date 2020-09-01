@@ -9,29 +9,29 @@
 	<description>这是测开笔记</description>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
-	  <dependency>
+<!-- 	  <dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>4.1.2</version>
-		</dependency>
+		</dependency> -->
 		<!--  https://mvnrepository.com/artifact/io.appium/java-client -->
-		<!-- <dependency>
+		 <dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>5.0.4</version>
-		</dependency> -->
+		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>2.53.1</version>
-		</dependency> 
-		<!-- <dependency>
+		</dependency>  -->
+		 <dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.6.0</version>
-		</dependency>  -->
+		</dependency> 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone -->
 		<dependency>
 		    <groupId>org.seleniumhq.selenium</groupId>
@@ -108,7 +108,16 @@
 			</exclusions>
 		</dependency>
 		
-		<!-- 依赖Guice -->
+		<!-- xml文件解析 -->
+		<!-- https://mvnrepository.com/artifact/xml-apis/xml-apis -->
+		<dependency>
+		    <groupId>xml-apis</groupId>
+		    <artifactId>xml-apis</artifactId>
+		    <version>1.4.01</version>
+		</dependency>
+		
+		<!--  -->
+		<!-- reportng依赖Guice -->
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
@@ -155,12 +164,19 @@
 				<!--这样就可以实现Maven运行test命令时按照TestNG的testng.xml配置运行相应的测试用例，运行mvn test指令即可 -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.20</version>
+				<version>2.7.1</version>
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
+					<systemPropertyVariables>
+						<org.uncommon.reportng.escape-output>false</org.uncommon.reportng.escape-output>
+					</systemPropertyVariables>
 					<suiteXmlFiles>
-						<suiteXmlFile>./src/main/resources/testng.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>./src/main/resources/testng.xml</suiteXmlFile> -->
+						 <suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					<argLine>
+						-Dfile.encoding=UTF-8
+					</argLine>
 					<argLine>
 						-javaagent:"${settings.localRepository}\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar"
 					</argLine>
