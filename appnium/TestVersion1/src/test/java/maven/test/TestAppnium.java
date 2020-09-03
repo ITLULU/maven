@@ -18,15 +18,20 @@ public class TestAppnium {
 	 AndroidDriver<WebElement>driver;
 	@BeforeTest
 	public void beforeTest() {
-		driver=AppniumUtils.Init();	
+		try {
+			driver=AppniumUtils.Init();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
 	}
 
 	@Test
-	public void pageOpen()  {
-		log.info("----≤‚ ‘app----");
-		AppniumUtils.TestPageOpen();
-		Reporter.log("pageopen≤‚ ‘ÕÍ≥…");
-	}
+//	public void pageOpen()  {
+//		log.info("----≤‚ ‘app----");
+//		AppniumUtils.TestPageOpen();
+//		Reporter.log("pageopen≤‚ ‘ÕÍ≥…");
+//	}
 
 	@AfterTest
 	public void afterTest() {
