@@ -40,6 +40,7 @@ INFO:User [name=xiaohong, password=654321]
 INFO:list json转换[{"":"654321","name":"xiaohong"}, {"password":"789","name":"xixi"}]
 2020-09-03 23:24:38 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:100) ]
 INFO:{001={"password":"654321","name":"xiaohong"}, 002=[{"password":"654321","name":"xiaohong"},{"password":"789","name":"xixi"}]}
+<<<<<<< HEAD
 2020-09-04 22:11:53 涓嬪崍 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:88) ]
 INFO:string转jsonObject:{"001":{"password":"654321","name":"xiaohong"},"002":[{"$ref":"$.001"},{"password":"789","name":"xixi"}]}
 2020-09-04 22:11:53 涓嬪崍 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:94) ]
@@ -49,4 +50,15 @@ INFO:User [name=xiaohong, password=654321]
 2020-09-04 22:11:53 涓嬪崍 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:98) ]
 INFO:list json转锟斤拷[{"":"654321","name":"xiaohong"}, {"password":"789","name":"xixi"}]
 2020-09-04 22:11:53 涓嬪崍 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:99) ]
+=======
+2020-09-04 22:11:13 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:88) ]
+INFO:string转jsonObject:{"001":{"password":"654321","name":"xiaohong"},"002":[{"$ref":"$.001"},{"password":"789","name":"xixi"}]}
+2020-09-04 22:11:13 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:94) ]
+INFO:map转jsonString:{"name":"小组","age":12}
+2020-09-04 22:11:13 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:97) ]
+INFO:User [name=xiaohong, password=654321]
+2020-09-04 22:11:13 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:98) ]
+INFO:list json转换[{"":"654321","name":"xiaohong"}, {"password":"789","name":"xixi"}]
+2020-09-04 22:11:13 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:99) ]
+>>>>>>> 346fd8b4bc4de2b7efa879ffb00b5f4e9b7a406c
 INFO:{001={"password":"654321","name":"xiaohong"}, 002=[{"password":"654321","name":"xiaohong"},{"password":"789","name":"xixi"}]}
