@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1598690834397" stop="1598690836911" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default suite : Default test</name>
+    <title>Default suite : Default test</title>
+    <test-cases>
+        <test-case start="1598690834629" stop="1598690834780" status="passed">
+            <name>failedTest</name>
+            <description>侯征测试</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="maven.test.TestMavenExcel$Test01"/>
+                <label name="testMethod" value="failedTest"/>
+                <label name="host" value="DESKTOP-2GSVMEN"/>
+                <label name="thread" value="15876@DESKTOP-2GSVMEN.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1598690835013" stop="1598690836899" status="passed">
+            <name>f</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="maven.test.TestMavenExcel"/>
+                <label name="testMethod" value="f"/>
+                <label name="host" value="DESKTOP-2GSVMEN"/>
+                <label name="thread" value="15876@DESKTOP-2GSVMEN.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
