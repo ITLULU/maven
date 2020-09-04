@@ -40,3 +40,13 @@ INFO:User [name=xiaohong, password=654321]
 INFO:list jsonת��[{"":"654321","name":"xiaohong"}, {"password":"789","name":"xixi"}]
 2020-09-03 23:24:38 ���� [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:100) ]
 INFO:{001={"password":"654321","name":"xiaohong"}, 002=[{"password":"654321","name":"xiaohong"},{"password":"789","name":"xixi"}]}
+2020-09-04 22:11:53 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:88) ]
+INFO:stringתjsonObject:{"001":{"password":"654321","name":"xiaohong"},"002":[{"$ref":"$.001"},{"password":"789","name":"xixi"}]}
+2020-09-04 22:11:53 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:94) ]
+INFO:mapתjsonString:{"name":"С��","age":12}
+2020-09-04 22:11:53 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:97) ]
+INFO:User [name=xiaohong, password=654321]
+2020-09-04 22:11:53 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:98) ]
+INFO:list jsonת��[{"":"654321","name":"xiaohong"}, {"password":"789","name":"xixi"}]
+2020-09-04 22:11:53 下午 [Thread: main][ Class:util.JSONTransforUtils >> Method: util.JSONTransforUtils.main(JSONTransforUtils.java:99) ]
+INFO:{001={"password":"654321","name":"xiaohong"}, 002=[{"password":"654321","name":"xiaohong"},{"password":"789","name":"xixi"}]}

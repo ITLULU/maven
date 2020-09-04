@@ -19,7 +19,7 @@ public class DataUtil {
 	public static String formate4 = "YYYYMMdd";
 	public static String formate5="yyyy-MM-dd HH:mm:ss";
 	/**
-	 * Ê±¼ä¸ñÊ½×ª»»
+	 * æ—¥æœŸå·¥å…·ç±»
 	 * 
 	 * @param date
 	 * @param form
@@ -34,7 +34,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * ÅÐ¶ÏÊÇ·ñÏàÍ¬
+	 * ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Í¬
 	 * 
 	 * @param dateStr
 	 * @param pattern
@@ -45,7 +45,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * ×Ö·û´®×ªDate
+	 * ï¿½Ö·ï¿½ï¿½ï¿½×ªDate
 	 * 
 	 * @param dateStr
 	 * @param pattern
@@ -62,7 +62,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * µÃµ½Äê·Ý
+	 * ï¿½Ãµï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param date
 	 * @return
@@ -75,7 +75,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * µÃµ½ÔÂ·Ý
+	 * ï¿½Ãµï¿½ï¿½Â·ï¿½
 	 * 
 	 * @param date
 	 * @return
@@ -88,7 +88,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * µÃµ½ÌìÊý
+	 * ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param date
 	 * @return
@@ -101,7 +101,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * Ôö¼ÓÄêÊý
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param date
 	 * @param yearNum
@@ -115,7 +115,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * Ôö¼ÓÔÂ·Ý
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½
 	 * 
 	 * @param date
 	 * @param monthNum
@@ -129,7 +129,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * Ôö¼ÓÌìÊý
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param date
 	 * @param dateNum
@@ -143,7 +143,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * µÃµ½Ê±¼ä´Á
+	 * ï¿½Ãµï¿½Ê±ï¿½ï¿½ï¿½
 	 * 
 	 * @return
 	 */
@@ -153,7 +153,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * µÃµ½ÖªµÀÈÕÆÚµÄÊ±¼ä´Á
+	 * ï¿½Ãµï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½ï¿½
 	 * 
 	 * @param date
 	 * @return
@@ -164,7 +164,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * ½«ÄêÔÂÈÕ×ªÎªÈÕÆÚ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªÎªï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param year
 	 * @param month
@@ -177,11 +177,11 @@ public class DataUtil {
 	}
 
 	/**
-	 * ½«Ö¸¶¨¸ñÊ½µÄÈÕÆÚ/Ê±¼ä×Ö·û´®×ª»»³ÉDate¸ñÊ½
+	 * ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/Ê±ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Dateï¿½ï¿½Ê½
 	 *
-	 * @param strDate   StringÀàÐÍ£¬ÈÕÆÚ×Ö·û
-	 * @param strFormat StringÀàÐÍ£¬¸ñÊ½
-	 * @return DateÀàÐÍ
+	 * @param strDate   Stringï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
+	 * @param strFormat Stringï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½Ê½
+	 * @return Dateï¿½ï¿½ï¿½ï¿½
 	 * @throws Exception
 	 */
 	public static Date toUtilDate(String strDate, String strFormat) {
@@ -200,11 +200,11 @@ public class DataUtil {
 	}
 
 	/**
-	 * ½«Ö¸¶¨¸ñÊ½µÄÈÕÆÚ/Ê±¼ä×Ö·û´®×ª»»³ÉDate¸ñÊ½
+	 * ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/Ê±ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Dateï¿½ï¿½Ê½
 	 *
-	 * @param strDate   StringÀàÐÍ£¬ÈÕÆÚ×Ö·û
-	 * @param strFormat StringÀàÐÍ£¬¸ñÊ½
-	 * @return DateÀàÐÍ
+	 * @param strDate   Stringï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
+	 * @param strFormat Stringï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½Ê½
+	 * @return Dateï¿½ï¿½ï¿½ï¿½
 	 */
 	public static java.sql.Date toSQLDate(String strDate, String strFormat) {
 		try {
@@ -222,7 +222,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * µÃµ½ÏµÍ³µ±Ç°Ê±¼ä
+	 * ï¿½Ãµï¿½ÏµÍ³ï¿½ï¿½Ç°Ê±ï¿½ï¿½
 	 * 
 	 * @param iType
 	 * @return
@@ -272,7 +272,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * »ñµÃÁ½¸öÈÕÆÚÏà¸ôÌìÊý
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 *
 	 * @param dtBeginDate
 	 * @param dtEndDate
@@ -295,7 +295,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * ´«ÈëÒ»¸öÊ±¼ä£¬µÃµ½¸ÃÊ±¼äËùÔÚÔÂµÄµÚÒ»Ìì
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ä£¬ï¿½Ãµï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÂµÄµï¿½Ò»ï¿½ï¿½
 	 * 
 	 * @param date
 	 * @return
@@ -309,7 +309,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * ´«ÈëÒ»¸öÊ±¼ä£¬µÃµ½¸ÃÊ±¼äËùÔÚÔÂµÄ×îºóÒ»Ìì
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ä£¬ï¿½Ãµï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 	 * 
 	 * @param date
 	 * @return
@@ -323,7 +323,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * ´«ÈëÒ»¸öÊ±¼äºÍÔÂ·Ý£¬µÃµ½Ïà¼ÓºóµÄÊ±¼ä
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Â·Ý£ï¿½ï¿½Ãµï¿½ï¿½ï¿½Óºï¿½ï¿½Ê±ï¿½ï¿½
 	 * 
 	 * @param date
 	 * @param num
@@ -338,7 +338,7 @@ public class DataUtil {
 	}
 
 	/**
-	 * Ö»¾«È·µ½ÈÕÆÚ£¬ÉáÈ¥Ê±·ÖÃë
+	 * Ö»ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½È¥Ê±ï¿½ï¿½ï¿½ï¿½
 	 *
 	 * @param time
 	 * @return Date
@@ -354,7 +354,7 @@ public class DataUtil {
 	}
 	
 	/**
-	 * ÈÕÆÚ±È½Ïº¯Êý£¬ÏàµÈ·µ»Ø0,´óÓÚ´óÓÚÁãµÄÖµ,Ð¡ÓÚ·µ»ØÐ¡ÓÚÁãµÄÖµ
+	 * ï¿½ï¿½ï¿½Ú±È½Ïºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½0,ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ,Ð¡ï¿½Ú·ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 	 * @param dateA
 	 * @param dateB
 	 * @return
@@ -367,7 +367,7 @@ public class DataUtil {
     }
     
    /**
-    * ÈÕÆÚ±È½Ïº¯Êý£¬ÏàµÈ·µ»Ø0,´óÓÚ´óÓÚÁãµÄÖµ,Ð¡ÓÚ·µ»ØÐ¡ÓÚÁãµÄÖµ£¨Ö»±È½ÏÄêÔÂ£©
+    * ï¿½ï¿½ï¿½Ú±È½Ïºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½0,ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ,Ð¡ï¿½Ú·ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ö»ï¿½È½ï¿½ï¿½ï¿½ï¿½Â£ï¿½
     * @param dateA
     * @param dateB
     * @return
@@ -379,7 +379,7 @@ public class DataUtil {
         return datea.compareTo(dateb);
     }
     /**
-     * java.util.Date×ª»¯³ÉLocalDat
+     * java.util.Date×ªï¿½ï¿½ï¿½ï¿½LocalDat
      * @param date
      * @return
      */
@@ -390,7 +390,7 @@ public class DataUtil {
     }
 
     /**
-     * LocalDate×ª»¯³É java.util.Date
+     * LocalDate×ªï¿½ï¿½ï¿½ï¿½ java.util.Date
      * @param localDate
      * @return
      */

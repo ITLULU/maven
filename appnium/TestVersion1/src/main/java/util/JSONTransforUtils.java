@@ -1,6 +1,5 @@
-package util;
+ï»¿package util;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -15,7 +14,7 @@ import pojo.User;
 
 
 /**
- * json×ª»»¹¤¾ß
+ * json×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  * @author Administrator
  *
@@ -39,7 +38,7 @@ public class JSONTransforUtils {
 	}
 
 	/**
-	 * list×ª×Ö·û´®
+	 * list×ªï¿½Ö·ï¿½ï¿½ï¿½
 	 * 
 	 * @param lists
 	 * @return
@@ -90,13 +89,13 @@ public class JSONTransforUtils {
 		 
 		
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("name", "Ð¡×é");
+		map.put("name", "Ð¡ï¿½ï¿½");
 		map.put("age", 12);
 		log.info("map×ªjsonString:" + mapTransTOJSON(map));
 		
 		
 		log.info(JAVAObjectTransToJSON(jsonuser));
-		log.info("list json×ª»»"+getListFromJSON(jsonlist));
+		log.info("list json×ªï¿½ï¿½"+getListFromJSON(jsonlist));
 		log.info(getMapFromJSON(jsonmap));
 	}
 
