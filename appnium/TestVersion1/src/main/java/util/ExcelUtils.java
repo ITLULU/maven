@@ -23,6 +23,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
 import org.apache.poi.util.StringUtil;
 
 /**
@@ -109,6 +110,31 @@ public class ExcelUtils {
 			}
 		}
 	}
+	/**
+	 * 拿到标题
+	 * @param fileName
+	 * @param sheetName
+	 * @return
+	 * @throws IOException 
+	 * @throws EncryptedDocumentException 
+	 */
+	public static String[] getTitle(String fileName,String sheetName) throws EncryptedDocumentException, IOException {
+		InputStream ins=new FileInputStream(new File(fileName));
+		Workbook workbook=WorkbookFactory.create(ins);
+		Sheet sheet=workbook.getSheet(sheetName);
+		Row titile=sheet.getRow(0);
+		//得到最后一列的列号
+		int lastColum=titile.getLastCellNum();
+		String[]titleList=new String[lastColum];
+		for(int i=0;i<lastColum;i++) {
+			Cell cell=titile.getCell(i,MissingCellPolicy.CREATE_NULL_AS_BLANK);
+			cell.setCellType(CellType.STRING);
+			String value=cell.getStringCellValue();
+			value=value.substring(0,value.indexOf("("));
+			titleList[i]=value;
+		}
+		return titleList;
+	}
 	
 	/**
 	 * 得到ob对象
@@ -128,5 +154,52 @@ public class ExcelUtils {
 			}
 		}
 		return ob;
+	}
+	/**
+	 * 得到知道区间的Excel数据
+	 * @param fileName
+	 * @param sheetName
+	 * @param rowloum
+	 * @param coloum
+	 * @return
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
+	public static Object[][] ReadExcelTo(String fileName,String sheetName,int rowloum[],int coloum[]) throws EncryptedDocumentException, IOException {
+		Object[][] ob=new Object[rowloum.length][coloum.length];
+		InputStream ins=new FileInputStream(new File(fileName));
+		Workbook workbook=WorkbookFactory.create(ins);
+		String title[]=getTitle(fileName, sheetName);
+		Sheet sheet=workbook.getSheet(sheetName);
+		for(int i=0;i<rowloum.length;i++) {
+			Row row=sheet.getRow(rowloum[i]-1);
+			for(int j=0;j<coloum.length;j++) {
+				String titlename=title[j];
+				Cell cell=row.getCell(coloum[j]-1,MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				cell.setCellType(CellType.STRING);
+				//log.info(cell.getStringCellValue());
+				ob[i][j]=titlename+":"+cell.getStringCellValue();
+			}
+			
+		}
+		return ob;
+	}
+	public static void main(String[] args) throws EncryptedDocumentException, IOException {
+		  String fileName="src/main/resources/TestExcel.xlsx";
+		  String sheetName="main";
+		  String[]titile= getTitle(fileName, sheetName);
+		  for(String str:titile) {
+			  log.info("key："+str);
+		  }
+		  
+		  int row[]= {2,3};
+		  int col[]= {1,2,3};
+		  Object[][] obj=ReadExcelTo(fileName, sheetName,row,col);
+		  for(int i=0;i<obj.length;i++) {
+			  for(int j=0;j<obj[i].length;j++) {
+				  System.out.println("value:"+obj[i][j]);
+			  }
+		  }
+		  
 	}
 }

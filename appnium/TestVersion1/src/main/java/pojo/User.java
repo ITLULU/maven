@@ -2,6 +2,7 @@ package pojo;
 
 public class User {
  
+	public String testNo;
 	public String name;
 	public String password;
 	
@@ -26,15 +27,33 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getTestNo() {
+		return testNo;
+	}
+	public void setTestNo(String testNo) {
+		this.testNo = testNo;
+	}
+	public User(String testNo, String name, String password) {
+		super();
+		this.testNo = testNo;
+		this.name = name;
+		this.password = password;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("User [name=");
+		builder.append("User [testNo=");
+		builder.append(testNo);
+		builder.append(", name=");
 		builder.append(name);
 		builder.append(", password=");
 		builder.append(password);
 		builder.append("]");
 		return builder.toString();
 	}
+	
 	
 }

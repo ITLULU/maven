@@ -8,7 +8,7 @@
 	<packaging>war</packaging>
 	<description>这是测开笔记</description>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<!-- java-client appnium客户端 -->
 	   <!--  <dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
@@ -72,24 +72,22 @@
 
 		<!-- jackson引入 -->
 
-	        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.11.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		</dependency> -->
+		<!--
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
 			<version>2.11.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
-		<dependency>
+		</dependency> -->
+		<!-- <dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
 			<version>2.11.0</version>
-		</dependency>
+		</dependency> -->
 		<!-- jackson的组合依赖 -->	
 		<!-- https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient -->
 		<!-- <dependency> <groupId>commons-httpclient</groupId> <artifactId>commons-httpclient</artifactId> 
@@ -97,17 +95,45 @@
 
 
 		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.12</version>
+		</dependency> -->
+		
+		<!-- rest-assured框架  本身依赖jackson-core2.10   -->
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+		    <groupId>io.rest-assured</groupId>
+		    <artifactId>rest-assured</artifactId>
+		    <version>4.3.0</version>
+		    <scope>test</scope>
 		</dependency>
 
+		<!-- schema文件来验证  -->
+		<dependency>
+		    <groupId>io.rest-assured</groupId>
+		    <artifactId>json-schema-validator</artifactId>
+		    <version>4.3.0</version>
+		</dependency>
+		<!--  用spring-mock-mvc 模型对控制层测试-->
+		<dependency>
+		    <groupId>io.rest-assured</groupId>
+		    <artifactId>spring-mock-mvc</artifactId>
+		    <version>4.3.0</version>
+		</dependency>
+ 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.3.2</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
